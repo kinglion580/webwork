@@ -2,13 +2,14 @@
 import scrapy
 
 class ShiyanlouCoursesSpider(scrapy.Spider):
+
     name='shiyanlou-courses'
 
-    def start_requests(self):
+    @property
+    def start_urls(self):
         url_tmpl='http://www.shiyanlou.com/courses/?category=all&course_type=all&fee=all&page={}'
-        urls=(url_tmpl.format(i) for i in range(1,23))
-        for url in urls:
-            yield scrapy.Request(url=url,callback=self.parse)
+        return (url_tmpl.format(i) for i in range(1,23))
+
     def parse(self,response):
         for course in response.css('div.course-body'):
             yield {
