@@ -1,0 +1,37 @@
+from scrapy.html import HtmlResponse
+from scrapy.http import HtmlResponse
+default_coding='utf-8'
+body=open('example.html').read()
+body
+response=HtmlResponse(url='http://example.html',body=body.encode('utf-8'))
+help
+help(HtmlResponse)
+HtmlResponse?
+response
+response.xpath('/html/head/title').extract()
+response.xpath('//title').extract()
+response.xpath('//h2').extract()
+response.css('title').extract()
+response.css('h2').extract()
+response.xpath('//img/@src').extract()
+response.xpath('img##src').extract()
+response.css('img##src').extract()
+response.xpath('img##src').extract()
+response.xpath('//img/@src').extract()
+response.css('img str(src)').extract()
+response.css('img::str(src)').extract()
+response.css('img::astr(src)').extract()
+response.css('img::attr(src)').extract()
+response.css('img::attr(src)').extract()
+response.xpath('//img/@src').extract()
+response.xpath('//p[@class="location"]/text()').extract)
+response.xpath('//p[@class="location"]/text()').extract()
+response.css('p.location::text').extract()
+response.xpath('//div[@class="companies"]/div[2]')
+response.xpath('//div[@class="companies"]/div[2]').xpath('//a/@href').extract()
+response.xpath('//div[@class="companies"]/div[2]').xpath('.//a/@href').extract()
+response.xpath('//div[@class="companies"]/div[2]/a/@href').extract()
+response.xpath('//div[contains(@class,"name2"))/text()').extract()
+response.xpath('//div[contains(@class,"name2")])/text()').extract()
+response.xpath('//div[contains(@class,"name2")]/text()').extract()
+
