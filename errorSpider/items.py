@@ -8,7 +8,7 @@
 import scrapy
 
 
-class ErrorspiderItem(scrapy.Item):
+class ErrorSpiderItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     userHref = scrapy.Field()
