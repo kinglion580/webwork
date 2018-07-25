@@ -11,4 +11,14 @@ import scrapy
 class ErrorspiderItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    userHref = scrapy.Field()
+    title = scrapy.Field()
+    userId = scrapy.Field()
+    username = scrapy.Field()
+    level = scrapy.Field()
+    date = scrapy.Field()
+    courseHref = scrapy.Field()
+    coursename = scrapy.Field()
+    answered = scrapy.Field()
+    viewed = scrapy.Field()
+
