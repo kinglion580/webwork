@@ -12,6 +12,11 @@ class ErrorspiderPipeline(object):
         #item['userId'] = int(item['userId'])
         self.session.add(CourseError(**item))
         return item
+        
+#       if int(item['userId']) > 10000:
+#            raise DropItem('userId more than 10000')
+#       else
+#           self.session.add(CourseError(**item))
 
     def open_spider(self, spider):
         Session = sessionmaker(bind=engine)
